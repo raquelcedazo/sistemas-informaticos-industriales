@@ -15,8 +15,15 @@
 #include "Esfera.h"
 #include "Raqueta.h"
 
+#include "DatosMemCompartida.h"
+
+// Dentro de class CMundo:
+
 class CMundo  
 {
+private:
+    DatosMemCompartida* shm_datos;
+    int shm_fd;
 public:
 	void Init();
 	CMundo();

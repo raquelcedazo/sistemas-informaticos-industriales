@@ -20,8 +20,6 @@ Esfera::~Esfera()
 
 }
 
-
-
 void Esfera::Dibuja()
 {
 	glColor3ub(255,255,0);
@@ -34,5 +32,6 @@ void Esfera::Dibuja()
 
 void Esfera::Mueve(float t)
 {
-
+    centro.x = centro.x + velocidad.x * t;
+	centro.y = centro.y + velocidad.y * t;
 }

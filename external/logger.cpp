@@ -8,26 +8,24 @@
 
 int main(int argc, char **argv) {
     int fd;
-    char buffer[1024];
+    char buffer[1024];    
 
-    // borrar FIFO por si existiera previamente
-    unlink(X1);
-
-    /* crear el FIFO */
-    if (mkfifo(X2)<0) {
+    // borra FIFO por si existía previamente
+    unlink("FIFO");
+    /* crea el FIFO */
+    if (mkfifo("FIFO", 0600)<0) {
         perror("No puede crearse el FIFO");
         return(1);
     }
-    /* Abrir el FIFO */
-    if (X3) {
+    /* Abre el FIFO */
+    if ((fd=open("FIFO", O_RDONLY))<0) {
         perror("No puede abrirse el FIFO");
         return(1);
     }
-    /* Leer de la FIFO */
-    while (X4) {
-	// X5: Imprimir el texto en la pantalla
+    while (read(fd, buffer, sizeof(buffer)) > 0) {
+	printf("%s\n", buffer);
     }
-    close(X5);
-    unlink(X6);
+    close(fd);
+    unlink("FIFO");
     return(0);
 }

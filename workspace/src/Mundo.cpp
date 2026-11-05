@@ -1,3 +1,4 @@
+
 // Mundo.cpp: implementation of the CMundo class.
 //
 //////////////////////////////////////////////////////////////////////
@@ -10,6 +11,15 @@
 #include <string.h>
 #include <math.h>
 
+// Librerías añadidas para Memoria Compartida (Práctica 3)
+#include <fcntl.h>
+#include <sys/mman.h>
+#include <sys/stat.h>
+#include <unistd.h>
+#include "DatosMemCompartida.h"
+
+#define SHM_NAME "/shm_tenis"
+
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction
 //////////////////////////////////////////////////////////////////////
@@ -21,7 +31,9 @@ CMundo::CMundo()
 
 CMundo::~CMundo()
 {
-
+	if (shm_datos != nullptr) {
+		munmap(shm_datos, sizeof(DatosMemCompartida));
+	}
 }
 
 void CMundo::InitGL()
@@ -76,14 +88,14 @@ void print(char *mensaje, int x, int y, float r, float g, float b)
 void CMundo::OnDraw()
 {
 	//Borrado de la pantalla	
-   	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	//Para definir el punto de vista
 	glMatrixMode(GL_MODELVIEW);	
 	glLoadIdentity();
 	
 	gluLookAt(0.0, 0, 17,  // posicion del ojo
-		0.0, 0.0, 0.0,      // hacia que punto mira  (0,0,0) 
+		0.0, 0.0, 0.0,      // hacia que punto mira  (0,0,0)  
 		0.0, 1.0, 0.0);      // definimos hacia arriba (eje Y)    
 
 	/////////////////
@@ -115,6 +127,20 @@ void CMundo::OnDraw()
 
 void CMundo::OnTimer(int value)
 {	
+	// Actualizar datos compartidos para el bot y procesar su acción
+	if (shm_datos != nullptr) {
+		shm_datos->esfera = esfera;
+		shm_datos->raqueta1 = jugador1;
+
+		if (shm_datos->accion == 1) {
+			OnKeyboardDown('w', 0, 0);
+		} else if (shm_datos->accion == -1) {
+			OnKeyboardDown('s', 0, 0);
+		} else {
+			jugador1.velocidad.y = 0;
+		}
+	}
+
 	jugador1.Mueve(0.025f);
 	jugador2.Mueve(0.025f);
 	esfera.Mueve(0.025f);
@@ -152,25 +178,46 @@ void CMundo::OnKeyboardDown(unsigned char key, int x, int y)
 {
 	switch(key)
 	{
-//	case 'a':jugador1.velocidad.x=-1;break;
-//	case 'd':jugador1.velocidad.x=1;break;
 	case 's':jugador1.velocidad.y=-4;break;
 	case 'w':jugador1.velocidad.y=4;break;
 	case 'l':jugador2.velocidad.y=-4;break;
 	case 'o':jugador2.velocidad.y=4;break;
-
 	}
 }
 
 void CMundo::Init()
 {
+	puntos1=0;
+	puntos2=0;
+
+	// Inicialización y configuración del fichero proyectado en memoria
+	shm_unlink(SHM_NAME);
+	shm_fd = shm_open(SHM_NAME, O_CREAT | O_RDWR, 0666);
+	if (shm_fd == -1) {
+		perror("Error al crear shm");
+	}
+	
+	if (ftruncate(shm_fd, sizeof(DatosMemCompartida)) == -1) {
+		perror("Error en ftruncate");
+	}
+
+	char* direccion = (char*)mmap(NULL, sizeof(DatosMemCompartida), PROT_READ | PROT_WRITE, MAP_SHARED, shm_fd, 0);
+	if (direccion == MAP_FAILED) {
+		perror("Error en mmap");
+	}
+
+	close(shm_fd);
+
+	shm_datos = (DatosMemCompartida*)direccion;
+	shm_datos->accion = 0;
+
 	Plano p;
-//pared inferior
+	//pared inferior
 	p.x1=-7;p.y1=-5;
 	p.x2=7;p.y2=-5;
 	paredes.push_back(p);
 
-//superior
+	//superior
 	p.x1=-7;p.y1=5;
 	p.x2=7;p.y2=5;
 	paredes.push_back(p);
