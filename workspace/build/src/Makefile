@@ -117,18 +117,32 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-src/CMakeFiles/tenis.dir/rule:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/tenis.dir/rule
-.PHONY : src/CMakeFiles/tenis.dir/rule
+src/CMakeFiles/servidor.dir/rule:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/servidor.dir/rule
+.PHONY : src/CMakeFiles/servidor.dir/rule
 
 # Convenience name for target.
-tenis: src/CMakeFiles/tenis.dir/rule
-.PHONY : tenis
+servidor: src/CMakeFiles/servidor.dir/rule
+.PHONY : servidor
 
 # fast build rule for target.
-tenis/fast:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/build
-.PHONY : tenis/fast
+servidor/fast:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/build
+.PHONY : servidor/fast
+
+# Convenience name for target.
+src/CMakeFiles/cliente.dir/rule:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/cliente.dir/rule
+.PHONY : src/CMakeFiles/cliente.dir/rule
+
+# Convenience name for target.
+cliente: src/CMakeFiles/cliente.dir/rule
+.PHONY : cliente
+
+# fast build rule for target.
+cliente/fast:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/build
+.PHONY : cliente/fast
 
 # Convenience name for target.
 src/CMakeFiles/logger.dir/rule:
@@ -163,7 +177,8 @@ Esfera.o: Esfera.cpp.o
 
 # target to build an object file
 Esfera.cpp.o:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Esfera.cpp.o
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Esfera.cpp.o
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Esfera.cpp.o
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Esfera.cpp.o
 .PHONY : Esfera.cpp.o
 
@@ -172,7 +187,8 @@ Esfera.i: Esfera.cpp.i
 
 # target to preprocess a source file
 Esfera.cpp.i:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Esfera.cpp.i
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Esfera.cpp.i
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Esfera.cpp.i
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Esfera.cpp.i
 .PHONY : Esfera.cpp.i
 
@@ -181,40 +197,66 @@ Esfera.s: Esfera.cpp.s
 
 # target to generate assembly for a file
 Esfera.cpp.s:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Esfera.cpp.s
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Esfera.cpp.s
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Esfera.cpp.s
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Esfera.cpp.s
 .PHONY : Esfera.cpp.s
 
-Mundo.o: Mundo.cpp.o
-.PHONY : Mundo.o
+MundoCliente.o: MundoCliente.cpp.o
+.PHONY : MundoCliente.o
 
 # target to build an object file
-Mundo.cpp.o:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Mundo.cpp.o
-.PHONY : Mundo.cpp.o
+MundoCliente.cpp.o:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/MundoCliente.cpp.o
+.PHONY : MundoCliente.cpp.o
 
-Mundo.i: Mundo.cpp.i
-.PHONY : Mundo.i
+MundoCliente.i: MundoCliente.cpp.i
+.PHONY : MundoCliente.i
 
 # target to preprocess a source file
-Mundo.cpp.i:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Mundo.cpp.i
-.PHONY : Mundo.cpp.i
+MundoCliente.cpp.i:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/MundoCliente.cpp.i
+.PHONY : MundoCliente.cpp.i
 
-Mundo.s: Mundo.cpp.s
-.PHONY : Mundo.s
+MundoCliente.s: MundoCliente.cpp.s
+.PHONY : MundoCliente.s
 
 # target to generate assembly for a file
-Mundo.cpp.s:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Mundo.cpp.s
-.PHONY : Mundo.cpp.s
+MundoCliente.cpp.s:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/MundoCliente.cpp.s
+.PHONY : MundoCliente.cpp.s
+
+MundoServidor.o: MundoServidor.cpp.o
+.PHONY : MundoServidor.o
+
+# target to build an object file
+MundoServidor.cpp.o:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/MundoServidor.cpp.o
+.PHONY : MundoServidor.cpp.o
+
+MundoServidor.i: MundoServidor.cpp.i
+.PHONY : MundoServidor.i
+
+# target to preprocess a source file
+MundoServidor.cpp.i:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/MundoServidor.cpp.i
+.PHONY : MundoServidor.cpp.i
+
+MundoServidor.s: MundoServidor.cpp.s
+.PHONY : MundoServidor.s
+
+# target to generate assembly for a file
+MundoServidor.cpp.s:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/MundoServidor.cpp.s
+.PHONY : MundoServidor.cpp.s
 
 Plano.o: Plano.cpp.o
 .PHONY : Plano.o
 
 # target to build an object file
 Plano.cpp.o:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Plano.cpp.o
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Plano.cpp.o
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Plano.cpp.o
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Plano.cpp.o
 .PHONY : Plano.cpp.o
 
@@ -223,7 +265,8 @@ Plano.i: Plano.cpp.i
 
 # target to preprocess a source file
 Plano.cpp.i:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Plano.cpp.i
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Plano.cpp.i
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Plano.cpp.i
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Plano.cpp.i
 .PHONY : Plano.cpp.i
 
@@ -232,7 +275,8 @@ Plano.s: Plano.cpp.s
 
 # target to generate assembly for a file
 Plano.cpp.s:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Plano.cpp.s
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Plano.cpp.s
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Plano.cpp.s
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Plano.cpp.s
 .PHONY : Plano.cpp.s
 
@@ -241,7 +285,8 @@ Raqueta.o: Raqueta.cpp.o
 
 # target to build an object file
 Raqueta.cpp.o:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Raqueta.cpp.o
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Raqueta.cpp.o
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Raqueta.cpp.o
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Raqueta.cpp.o
 .PHONY : Raqueta.cpp.o
 
@@ -250,7 +295,8 @@ Raqueta.i: Raqueta.cpp.i
 
 # target to preprocess a source file
 Raqueta.cpp.i:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Raqueta.cpp.i
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Raqueta.cpp.i
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Raqueta.cpp.i
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Raqueta.cpp.i
 .PHONY : Raqueta.cpp.i
 
@@ -259,7 +305,8 @@ Raqueta.s: Raqueta.cpp.s
 
 # target to generate assembly for a file
 Raqueta.cpp.s:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Raqueta.cpp.s
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Raqueta.cpp.s
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Raqueta.cpp.s
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Raqueta.cpp.s
 .PHONY : Raqueta.cpp.s
 
@@ -268,7 +315,8 @@ Vector2D.o: Vector2D.cpp.o
 
 # target to build an object file
 Vector2D.cpp.o:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Vector2D.cpp.o
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Vector2D.cpp.o
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Vector2D.cpp.o
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Vector2D.cpp.o
 .PHONY : Vector2D.cpp.o
 
@@ -277,7 +325,8 @@ Vector2D.i: Vector2D.cpp.i
 
 # target to preprocess a source file
 Vector2D.cpp.i:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Vector2D.cpp.i
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Vector2D.cpp.i
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Vector2D.cpp.i
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Vector2D.cpp.i
 .PHONY : Vector2D.cpp.i
 
@@ -286,7 +335,8 @@ Vector2D.s: Vector2D.cpp.s
 
 # target to generate assembly for a file
 Vector2D.cpp.s:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/Vector2D.cpp.s
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/Vector2D.cpp.s
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/Vector2D.cpp.s
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/Vector2D.cpp.s
 .PHONY : Vector2D.cpp.s
 
@@ -314,6 +364,30 @@ bot.cpp.s:
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/bot.dir/build.make src/CMakeFiles/bot.dir/bot.cpp.s
 .PHONY : bot.cpp.s
 
+cliente.o: cliente.cpp.o
+.PHONY : cliente.o
+
+# target to build an object file
+cliente.cpp.o:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/cliente.cpp.o
+.PHONY : cliente.cpp.o
+
+cliente.i: cliente.cpp.i
+.PHONY : cliente.i
+
+# target to preprocess a source file
+cliente.cpp.i:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/cliente.cpp.i
+.PHONY : cliente.cpp.i
+
+cliente.s: cliente.cpp.s
+.PHONY : cliente.s
+
+# target to generate assembly for a file
+cliente.cpp.s:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/cliente.cpp.s
+.PHONY : cliente.cpp.s
+
 logger.o: logger.cpp.o
 .PHONY : logger.o
 
@@ -338,29 +412,29 @@ logger.cpp.s:
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/logger.dir/build.make src/CMakeFiles/logger.dir/logger.cpp.s
 .PHONY : logger.cpp.s
 
-tenis.o: tenis.cpp.o
-.PHONY : tenis.o
+servidor.o: servidor.cpp.o
+.PHONY : servidor.o
 
 # target to build an object file
-tenis.cpp.o:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/tenis.cpp.o
-.PHONY : tenis.cpp.o
+servidor.cpp.o:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/servidor.cpp.o
+.PHONY : servidor.cpp.o
 
-tenis.i: tenis.cpp.i
-.PHONY : tenis.i
+servidor.i: servidor.cpp.i
+.PHONY : servidor.i
 
 # target to preprocess a source file
-tenis.cpp.i:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/tenis.cpp.i
-.PHONY : tenis.cpp.i
+servidor.cpp.i:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/servidor.cpp.i
+.PHONY : servidor.cpp.i
 
-tenis.s: tenis.cpp.s
-.PHONY : tenis.s
+servidor.s: servidor.cpp.s
+.PHONY : servidor.s
 
 # target to generate assembly for a file
-tenis.cpp.s:
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/tenis.cpp.s
-.PHONY : tenis.cpp.s
+servidor.cpp.s:
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/servidor.cpp.s
+.PHONY : servidor.cpp.s
 
 # Help Target
 help:
@@ -371,14 +445,18 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bot"
+	@echo "... cliente"
 	@echo "... logger"
-	@echo "... tenis"
+	@echo "... servidor"
 	@echo "... Esfera.o"
 	@echo "... Esfera.i"
 	@echo "... Esfera.s"
-	@echo "... Mundo.o"
-	@echo "... Mundo.i"
-	@echo "... Mundo.s"
+	@echo "... MundoCliente.o"
+	@echo "... MundoCliente.i"
+	@echo "... MundoCliente.s"
+	@echo "... MundoServidor.o"
+	@echo "... MundoServidor.i"
+	@echo "... MundoServidor.s"
 	@echo "... Plano.o"
 	@echo "... Plano.i"
 	@echo "... Plano.s"
@@ -391,12 +469,15 @@ help:
 	@echo "... bot.o"
 	@echo "... bot.i"
 	@echo "... bot.s"
+	@echo "... cliente.o"
+	@echo "... cliente.i"
+	@echo "... cliente.s"
 	@echo "... logger.o"
 	@echo "... logger.i"
 	@echo "... logger.s"
-	@echo "... tenis.o"
-	@echo "... tenis.i"
-	@echo "... tenis.s"
+	@echo "... servidor.o"
+	@echo "... servidor.i"
+	@echo "... servidor.s"
 .PHONY : help
 
 

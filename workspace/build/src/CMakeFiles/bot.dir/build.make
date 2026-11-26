@@ -97,24 +97,10 @@ src/CMakeFiles/bot.dir/Esfera.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bot.dir/Esfera.cpp.s"
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erick/Escritorio/practicas/sii-56965/workspace/src/Esfera.cpp -o CMakeFiles/bot.dir/Esfera.cpp.s
 
-src/CMakeFiles/bot.dir/Raqueta.cpp.o: src/CMakeFiles/bot.dir/flags.make
-src/CMakeFiles/bot.dir/Raqueta.cpp.o: /home/erick/Escritorio/practicas/sii-56965/workspace/src/Raqueta.cpp
-src/CMakeFiles/bot.dir/Raqueta.cpp.o: src/CMakeFiles/bot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/bot.dir/Raqueta.cpp.o"
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bot.dir/Raqueta.cpp.o -MF CMakeFiles/bot.dir/Raqueta.cpp.o.d -o CMakeFiles/bot.dir/Raqueta.cpp.o -c /home/erick/Escritorio/practicas/sii-56965/workspace/src/Raqueta.cpp
-
-src/CMakeFiles/bot.dir/Raqueta.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bot.dir/Raqueta.cpp.i"
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erick/Escritorio/practicas/sii-56965/workspace/src/Raqueta.cpp > CMakeFiles/bot.dir/Raqueta.cpp.i
-
-src/CMakeFiles/bot.dir/Raqueta.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bot.dir/Raqueta.cpp.s"
-	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erick/Escritorio/practicas/sii-56965/workspace/src/Raqueta.cpp -o CMakeFiles/bot.dir/Raqueta.cpp.s
-
 src/CMakeFiles/bot.dir/Plano.cpp.o: src/CMakeFiles/bot.dir/flags.make
 src/CMakeFiles/bot.dir/Plano.cpp.o: /home/erick/Escritorio/practicas/sii-56965/workspace/src/Plano.cpp
 src/CMakeFiles/bot.dir/Plano.cpp.o: src/CMakeFiles/bot.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/bot.dir/Plano.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/bot.dir/Plano.cpp.o"
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bot.dir/Plano.cpp.o -MF CMakeFiles/bot.dir/Plano.cpp.o.d -o CMakeFiles/bot.dir/Plano.cpp.o -c /home/erick/Escritorio/practicas/sii-56965/workspace/src/Plano.cpp
 
 src/CMakeFiles/bot.dir/Plano.cpp.i: cmake_force
@@ -124,6 +110,20 @@ src/CMakeFiles/bot.dir/Plano.cpp.i: cmake_force
 src/CMakeFiles/bot.dir/Plano.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bot.dir/Plano.cpp.s"
 	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erick/Escritorio/practicas/sii-56965/workspace/src/Plano.cpp -o CMakeFiles/bot.dir/Plano.cpp.s
+
+src/CMakeFiles/bot.dir/Raqueta.cpp.o: src/CMakeFiles/bot.dir/flags.make
+src/CMakeFiles/bot.dir/Raqueta.cpp.o: /home/erick/Escritorio/practicas/sii-56965/workspace/src/Raqueta.cpp
+src/CMakeFiles/bot.dir/Raqueta.cpp.o: src/CMakeFiles/bot.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/bot.dir/Raqueta.cpp.o"
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/bot.dir/Raqueta.cpp.o -MF CMakeFiles/bot.dir/Raqueta.cpp.o.d -o CMakeFiles/bot.dir/Raqueta.cpp.o -c /home/erick/Escritorio/practicas/sii-56965/workspace/src/Raqueta.cpp
+
+src/CMakeFiles/bot.dir/Raqueta.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/bot.dir/Raqueta.cpp.i"
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/erick/Escritorio/practicas/sii-56965/workspace/src/Raqueta.cpp > CMakeFiles/bot.dir/Raqueta.cpp.i
+
+src/CMakeFiles/bot.dir/Raqueta.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/bot.dir/Raqueta.cpp.s"
+	cd /home/erick/Escritorio/practicas/sii-56965/workspace/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/erick/Escritorio/practicas/sii-56965/workspace/src/Raqueta.cpp -o CMakeFiles/bot.dir/Raqueta.cpp.s
 
 src/CMakeFiles/bot.dir/Vector2D.cpp.o: src/CMakeFiles/bot.dir/flags.make
 src/CMakeFiles/bot.dir/Vector2D.cpp.o: /home/erick/Escritorio/practicas/sii-56965/workspace/src/Vector2D.cpp
@@ -143,8 +143,8 @@ src/CMakeFiles/bot.dir/Vector2D.cpp.s: cmake_force
 bot_OBJECTS = \
 "CMakeFiles/bot.dir/bot.cpp.o" \
 "CMakeFiles/bot.dir/Esfera.cpp.o" \
-"CMakeFiles/bot.dir/Raqueta.cpp.o" \
 "CMakeFiles/bot.dir/Plano.cpp.o" \
+"CMakeFiles/bot.dir/Raqueta.cpp.o" \
 "CMakeFiles/bot.dir/Vector2D.cpp.o"
 
 # External object files for target bot
@@ -152,8 +152,8 @@ bot_EXTERNAL_OBJECTS =
 
 bot: src/CMakeFiles/bot.dir/bot.cpp.o
 bot: src/CMakeFiles/bot.dir/Esfera.cpp.o
-bot: src/CMakeFiles/bot.dir/Raqueta.cpp.o
 bot: src/CMakeFiles/bot.dir/Plano.cpp.o
+bot: src/CMakeFiles/bot.dir/Raqueta.cpp.o
 bot: src/CMakeFiles/bot.dir/Vector2D.cpp.o
 bot: src/CMakeFiles/bot.dir/build.make
 bot: src/CMakeFiles/bot.dir/link.txt

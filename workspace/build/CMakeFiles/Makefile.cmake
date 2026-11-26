@@ -46,7 +46,8 @@ set(CMAKE_MAKEFILE_PRODUCTS
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "src/CMakeFiles/tenis.dir/DependInfo.cmake"
+  "src/CMakeFiles/servidor.dir/DependInfo.cmake"
+  "src/CMakeFiles/cliente.dir/DependInfo.cmake"
   "src/CMakeFiles/logger.dir/DependInfo.cmake"
   "src/CMakeFiles/bot.dir/DependInfo.cmake"
   )

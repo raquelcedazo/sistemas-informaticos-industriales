@@ -1,7 +1,6 @@
 INCLUDE_DIRECTORIES("${PROJECT_INCLUDE_DIR}")
 
 SET(COMMON_SRCS 
-	Mundo.cpp 
 	Esfera.cpp
 	Plano.cpp
 	Raqueta.cpp
@@ -10,13 +9,17 @@ SET(COMMON_SRCS
 				
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ..)
 
-# 1. Ejecutable del juego principal
-ADD_EXECUTABLE(tenis tenis.cpp ${COMMON_SRCS})
-TARGET_LINK_LIBRARIES(tenis glut GL GLU)
+# 1. Ejecutable del SERVIDOR (con pthread para el hilo)
+ADD_EXECUTABLE(servidor servidor.cpp MundoServidor.cpp ${COMMON_SRCS})
+TARGET_LINK_LIBRARIES(servidor glut GL GLU pthread)
 
-# 2. Ejecutable del logger (FIFO)
+# 2. Ejecutable del CLIENTE
+ADD_EXECUTABLE(cliente cliente.cpp MundoCliente.cpp ${COMMON_SRCS})
+TARGET_LINK_LIBRARIES(cliente glut GL GLU)
+
+# 3. Ejecutable del logger (FIFO)
 add_executable(logger logger.cpp)
 
-# 3. Ejecutable del bot autónomo (Memoria proyectada con mmap)
-add_executable(bot bot.cpp Esfera.cpp Raqueta.cpp Plano.cpp Vector2D.cpp)
+# 4. Ejecutable del bot autónomo (mmap)
+add_executable(bot bot.cpp ${COMMON_SRCS})
 TARGET_LINK_LIBRARIES(bot glut GL GLU)

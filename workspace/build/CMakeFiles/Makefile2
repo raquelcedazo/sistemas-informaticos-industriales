@@ -78,7 +78,8 @@ clean: src/clean
 # Directory level rules for directory src
 
 # Recursive "all" directory target.
-src/all: src/CMakeFiles/tenis.dir/all
+src/all: src/CMakeFiles/servidor.dir/all
+src/all: src/CMakeFiles/cliente.dir/all
 src/all: src/CMakeFiles/logger.dir/all
 src/all: src/CMakeFiles/bot.dir/all
 .PHONY : src/all
@@ -88,36 +89,63 @@ src/preinstall:
 .PHONY : src/preinstall
 
 # Recursive "clean" directory target.
-src/clean: src/CMakeFiles/tenis.dir/clean
+src/clean: src/CMakeFiles/servidor.dir/clean
+src/clean: src/CMakeFiles/cliente.dir/clean
 src/clean: src/CMakeFiles/logger.dir/clean
 src/clean: src/CMakeFiles/bot.dir/clean
 .PHONY : src/clean
 
 #=============================================================================
-# Target rules for target src/CMakeFiles/tenis.dir
+# Target rules for target src/CMakeFiles/servidor.dir
 
 # All Build rule for target.
-src/CMakeFiles/tenis.dir/all:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/depend
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles --progress-num=9,10,11,12,13,14,15 "Built target tenis"
-.PHONY : src/CMakeFiles/tenis.dir/all
+src/CMakeFiles/servidor.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles --progress-num=16,17,18,19,20,21,22 "Built target servidor"
+.PHONY : src/CMakeFiles/servidor.dir/all
 
 # Build rule for subdir invocation for target.
-src/CMakeFiles/tenis.dir/rule: cmake_check_build_system
+src/CMakeFiles/servidor.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles 7
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/tenis.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/servidor.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles 0
-.PHONY : src/CMakeFiles/tenis.dir/rule
+.PHONY : src/CMakeFiles/servidor.dir/rule
 
 # Convenience name for target.
-tenis: src/CMakeFiles/tenis.dir/rule
-.PHONY : tenis
+servidor: src/CMakeFiles/servidor.dir/rule
+.PHONY : servidor
 
 # clean rule for target.
-src/CMakeFiles/tenis.dir/clean:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/clean
-.PHONY : src/CMakeFiles/tenis.dir/clean
+src/CMakeFiles/servidor.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/clean
+.PHONY : src/CMakeFiles/servidor.dir/clean
+
+#=============================================================================
+# Target rules for target src/CMakeFiles/cliente.dir
+
+# All Build rule for target.
+src/CMakeFiles/cliente.dir/all:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/depend
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles --progress-num=7,8,9,10,11,12,13 "Built target cliente"
+.PHONY : src/CMakeFiles/cliente.dir/all
+
+# Build rule for subdir invocation for target.
+src/CMakeFiles/cliente.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles 7
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src/CMakeFiles/cliente.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles 0
+.PHONY : src/CMakeFiles/cliente.dir/rule
+
+# Convenience name for target.
+cliente: src/CMakeFiles/cliente.dir/rule
+.PHONY : cliente
+
+# clean rule for target.
+src/CMakeFiles/cliente.dir/clean:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/clean
+.PHONY : src/CMakeFiles/cliente.dir/clean
 
 #=============================================================================
 # Target rules for target src/CMakeFiles/logger.dir
@@ -126,7 +154,7 @@ src/CMakeFiles/tenis.dir/clean:
 src/CMakeFiles/logger.dir/all:
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/logger.dir/build.make src/CMakeFiles/logger.dir/depend
 	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/logger.dir/build.make src/CMakeFiles/logger.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles --progress-num=7,8 "Built target logger"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/erick/Escritorio/practicas/sii-56965/workspace/build/CMakeFiles --progress-num=14,15 "Built target logger"
 .PHONY : src/CMakeFiles/logger.dir/all
 
 # Build rule for subdir invocation for target.

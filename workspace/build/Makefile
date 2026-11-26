@@ -117,17 +117,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named tenis
+# Target rules for targets named servidor
 
 # Build rule for target.
-tenis: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tenis
-.PHONY : tenis
+servidor: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 servidor
+.PHONY : servidor
 
 # fast build rule for target.
-tenis/fast:
-	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/tenis.dir/build.make src/CMakeFiles/tenis.dir/build
-.PHONY : tenis/fast
+servidor/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/servidor.dir/build.make src/CMakeFiles/servidor.dir/build
+.PHONY : servidor/fast
+
+#=============================================================================
+# Target rules for targets named cliente
+
+# Build rule for target.
+cliente: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cliente
+.PHONY : cliente
+
+# fast build rule for target.
+cliente/fast:
+	$(MAKE) $(MAKESILENT) -f src/CMakeFiles/cliente.dir/build.make src/CMakeFiles/cliente.dir/build
+.PHONY : cliente/fast
 
 #=============================================================================
 # Target rules for targets named logger
@@ -164,8 +177,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... bot"
+	@echo "... cliente"
 	@echo "... logger"
-	@echo "... tenis"
+	@echo "... servidor"
 .PHONY : help
 
 
