@@ -9,7 +9,7 @@ SET(COMMON_SRCS
 				
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ..)
 
-# 1. Ejecutable del SERVIDOR (con pthread para el hilo)
+# 1. Ejecutable del SERVIDOR (con pthread)
 ADD_EXECUTABLE(servidor servidor.cpp MundoServidor.cpp ${COMMON_SRCS})
 TARGET_LINK_LIBRARIES(servidor glut GL GLU pthread)
 
